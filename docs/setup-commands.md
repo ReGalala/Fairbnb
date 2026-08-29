@@ -26,6 +26,21 @@ dotnet add reference ../Fairbnb.Api/Fairbnb.Api.csproj
 # dotnet add package Microsoft.EntityFrameworkCore.SqlServer   # <-- original plan
 dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL        # <-- what we use
 dotnet add package Microsoft.EntityFrameworkCore.Tools
+
+# Install EF Core CLI tool (global, one-time)
+dotnet tool install --global dotnet-ef
+```
+
+## EF Core Migrations (from backend/Fairbnb.Api/)
+```bash
+# Create a migration
+dotnet ef migrations add <MigrationName>
+
+# Apply migration to the database
+dotnet ef database update
+
+# Undo last migration (if not yet applied)
+dotnet ef migrations remove
 ```
 
 ## Frontend (from frontend/)
@@ -53,6 +68,9 @@ dotnet test
 ```bash
 # Start PostgreSQL (one-time, then runs automatically on boot)
 brew services start postgresql@14
+
+# Create the database (one-time)
+psql -U $(whoami) -d postgres -c "CREATE DATABASE fairbnb;"
 ```
 
 ## Shell setup
