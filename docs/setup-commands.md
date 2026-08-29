@@ -27,8 +27,18 @@ dotnet add reference ../Fairbnb.Api/Fairbnb.Api.csproj
 dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL        # <-- what we use
 dotnet add package Microsoft.EntityFrameworkCore.Tools
 
+# Install Identity and JWT packages (from backend/Fairbnb.Api/)
+dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore
+dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
+
 # Install EF Core CLI tool (global, one-time)
 dotnet tool install --global dotnet-ef
+```
+
+## Test project packages (from backend/Fairbnb.Api.Tests/)
+```bash
+dotnet add package Microsoft.AspNetCore.Mvc.Testing
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
 ```
 
 ## EF Core Migrations (from backend/Fairbnb.Api/)
