@@ -55,8 +55,9 @@ dotnet ef migrations remove
 
 ## Frontend (from frontend/)
 ```bash
-# Create React + Vite project
-npm create vite@latest . -- --template react
+# Create React + Vite + TypeScript project
+# Originally created with --template react (JS), then recreated with TypeScript
+npm create vite@latest . -- --template react-ts
 
 # Install dependencies
 npm install
