@@ -30,14 +30,13 @@ public class UnitsTests : IClassFixture<CustomWebApplicationFactory>
             new AuthenticationHeaderValue("Bearer", token);
 
         var response = await _client.PostAsJsonAsync("/api/units",
-            new { name = "Beach House", address = "123 Beach St", currency = "SEK" });
+            new { name = "Beach House", address = "123 Beach St" });
 
         Assert.Equal(HttpStatusCode.Created, response.StatusCode);
 
         var unit = await response.Content.ReadFromJsonAsync<UnitResponse>();
         Assert.NotNull(unit);
         Assert.Equal("Beach House", unit.Name);
-        Assert.Equal("SEK", unit.Currency);
     }
 
     [Fact]
@@ -48,7 +47,7 @@ public class UnitsTests : IClassFixture<CustomWebApplicationFactory>
             new AuthenticationHeaderValue("Bearer", token);
 
         await _client.PostAsJsonAsync("/api/units",
-            new { name = "Mountain Cabin", address = "456 Hill Rd", currency = "SEK" });
+            new { name = "Mountain Cabin", address = "456 Hill Rd" });
 
         var response = await _client.GetAsync("/api/units");
         response.EnsureSuccessStatusCode();
@@ -68,5 +67,5 @@ public class UnitsTests : IClassFixture<CustomWebApplicationFactory>
     }
 
     private record TokenResponse(string Token);
-    private record UnitResponse(int Id, string Name, string Address, string Currency, string Status);
+    private record UnitResponse(int Id, string Name, string Address, string Status);
 }

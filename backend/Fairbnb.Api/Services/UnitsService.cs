@@ -19,7 +19,6 @@ public class UnitsService
         {
             Name = request.Name,
             Address = request.Address,
-            Currency = request.Currency,
             Status = "Active",
             CreatedAt = DateTime.UtcNow
         };
@@ -43,7 +42,6 @@ public class UnitsService
             Id = unit.Id,
             Name = unit.Name,
             Address = unit.Address,
-            Currency = unit.Currency,
             Status = unit.Status,
             CreatedAt = unit.CreatedAt
         };
