@@ -20,6 +20,8 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
 
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
+        builder.UseSetting("Jwt:Key", "ThisIsATestKeyThatIsDefinitelyLongEnough123!");
+
         builder.ConfigureServices(services =>
         {
             // Remove all database-related registrations

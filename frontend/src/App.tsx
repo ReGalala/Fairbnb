@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { isLoggedIn, removeToken } from './api';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import UnitsPage from './pages/UnitsPage';
 
 export default function App() {
     const [loggedIn, setLoggedIn] = useState(isLoggedIn());
@@ -33,10 +34,5 @@ export default function App() {
       );
     }
 
-    return (
-      <div>
-        <h1>Welcome to Fairbnb!</h1>
-        <button onClick={handleLogout}>Logout</button>
-      </div>
-    );
+    return <UnitsPage onLogout={handleLogout} />;
   }
