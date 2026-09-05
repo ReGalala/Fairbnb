@@ -14,17 +14,17 @@
 ## FR-001 — Register account
 
 A person shall be able to create a Fairbnb account using an email address and password.
-**Implemented by:** [#3](https://github.com/ReGalala/Fairbnb/issues/3) [#5](https://github.com/ReGalala/Fairbnb/issues/5)
+**Implemented by:** [#3](https://github.com/ReGalala/Fairbnb/issues/3), [#5](https://github.com/ReGalala/Fairbnb/issues/5) 
 
 ## FR-002 — Log in
 
 A registered user shall be able to authenticate and access Fairbnb.
-**Implemented by:** [#3](https://github.com/ReGalala/Fairbnb/issues/3) [#5](https://github.com/ReGalala/Fairbnb/issues/5)
+**Implemented by:** [#3](https://github.com/ReGalala/Fairbnb/issues/3), [#5](https://github.com/ReGalala/Fairbnb/issues/5)
 
 ## FR-003 — Protected application
 
 Authenticated functionality shall not be accessible to unauthenticated users.
-**Implemented by:** [#3](https://github.com/ReGalala/Fairbnb/issues/3) [#5](https://github.com/ReGalala/Fairbnb/issues/5)
+**Implemented by:** [#3](https://github.com/ReGalala/Fairbnb/issues/3), [#5](https://github.com/ReGalala/Fairbnb/issues/5), [#6](https://github.com/ReGalala/Fairbnb/issues/6)
 
 ---
 
@@ -33,12 +33,12 @@ Authenticated functionality shall not be accessible to unauthenticated users.
 ## FR-004 — Create Unit
 
 An authenticated user shall be able to create a Unit.
-**Implemented by:** [#4](https://github.com/ReGalala/Fairbnb/issues/4)
+**Implemented by:** [#4](https://github.com/ReGalala/Fairbnb/issues/4), [#6](https://github.com/ReGalala/Fairbnb/issues/6)
 
 ## FR-005 — Unit information
 
 A Unit shall contain identifying information including a name and address.
-**Implemented by:** [#2](https://github.com/ReGalala/Fairbnb/issues/2)
+**Implemented by:** [#2](https://github.com/ReGalala/Fairbnb/issues/2), [#6](https://github.com/ReGalala/Fairbnb/issues/6)
 
 ## FR-006 — Unit membership
 
@@ -47,7 +47,7 @@ Users shall participate in Units through a Unit membership.
 ## FR-007 — View own Units
 
 A user shall be able to view the Units in which they are a member.
-**Implemented by:** [#4](https://github.com/ReGalala/Fairbnb/issues/4)
+**Implemented by:** [#4](https://github.com/ReGalala/Fairbnb/issues/4), [#6](https://github.com/ReGalala/Fairbnb/issues/6)
 
 ## FR-008 — Unit-level access
 
