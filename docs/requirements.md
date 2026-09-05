@@ -34,6 +34,7 @@ An authenticated user shall be able to create a Unit.
 ## FR-005 — Unit information
 
 A Unit shall contain identifying information including a name and address.
+**Implemented by:** [#2 — Create Unit entity and first migration](https://github.com/ReGalala/Fairbnb/issues/2)
 
 ## FR-006 — Unit membership
 
