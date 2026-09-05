@@ -33,6 +33,7 @@ Authenticated functionality shall not be accessible to unauthenticated users.
 ## FR-004 — Create Unit
 
 An authenticated user shall be able to create a Unit.
+**Implemented by:** [#4 — Create Unit API endpoints](https://github.com/ReGalala/Fairbnb/issues/4)
 
 ## FR-005 — Unit information
 
@@ -46,6 +47,7 @@ Users shall participate in Units through a Unit membership.
 ## FR-007 — View own Units
 
 A user shall be able to view the Units in which they are a member.
+**Implemented by:** [#4 — Create Unit API endpoints](https://github.com/ReGalala/Fairbnb/issues/4)
 
 ## FR-008 — Unit-level access
 
