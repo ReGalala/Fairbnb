@@ -24,7 +24,7 @@ A registered user shall be able to authenticate and access Fairbnb.
 ## FR-003 — Protected application
 
 Authenticated functionality shall not be accessible to unauthenticated users.
-**Implemented by:** [#3 — Set up ASP.NET Identity and JWT authentication](https://github.com/ReGalala/Fairbnb/issues/3) [#5](https://github.com/ReGalala/Fairbnb/issues/5)
+**Implemented by:** [#3](https://github.com/ReGalala/Fairbnb/issues/3) [#5](https://github.com/ReGalala/Fairbnb/issues/5)
 
 ---
 
@@ -33,12 +33,12 @@ Authenticated functionality shall not be accessible to unauthenticated users.
 ## FR-004 — Create Unit
 
 An authenticated user shall be able to create a Unit.
-**Implemented by:** [#4 — Create Unit API endpoints](https://github.com/ReGalala/Fairbnb/issues/4)
+**Implemented by:** [#4](https://github.com/ReGalala/Fairbnb/issues/4)
 
 ## FR-005 — Unit information
 
 A Unit shall contain identifying information including a name and address.
-**Implemented by:** [#2 — Create Unit entity and first migration](https://github.com/ReGalala/Fairbnb/issues/2)
+**Implemented by:** [#2](https://github.com/ReGalala/Fairbnb/issues/2)
 
 ## FR-006 — Unit membership
 
@@ -47,7 +47,7 @@ Users shall participate in Units through a Unit membership.
 ## FR-007 — View own Units
 
 A user shall be able to view the Units in which they are a member.
-**Implemented by:** [#4 — Create Unit API endpoints](https://github.com/ReGalala/Fairbnb/issues/4)
+**Implemented by:** [#4](https://github.com/ReGalala/Fairbnb/issues/4)
 
 ## FR-008 — Unit-level access
 
