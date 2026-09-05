@@ -14,17 +14,17 @@
 ## FR-001 — Register account
 
 A person shall be able to create a Fairbnb account using an email address and password.
-**Implemented by:** [#3 — Set up ASP.NET Identity and JWT authentication](https://github.com/ReGalala/Fairbnb/issues/3), **and** [#3 — Set up ASP.NET Identity and JWT authentication](https://github.com/ReGalala/Fairbnb/issues/3), [#5 — Set up frontend API connection and auth pages](https://github.com/ReGalala/Fairbnb/issues/5)
+**Implemented by:** [#3](https://github.com/ReGalala/Fairbnb/issues/3) [#5](https://github.com/ReGalala/Fairbnb/issues/5)
 
 ## FR-002 — Log in
 
 A registered user shall be able to authenticate and access Fairbnb.
-**Implemented by:** [#3 — Set up ASP.NET Identity and JWT authentication](https://github.com/ReGalala/Fairbnb/issues/3), **and** [#3 — Set up ASP.NET Identity and JWT authentication](https://github.com/ReGalala/Fairbnb/issues/3), [#5 — Set up frontend API connection and auth pages](https://github.com/ReGalala/Fairbnb/issues/5)
+**Implemented by:** [#3](https://github.com/ReGalala/Fairbnb/issues/3) [#5](https://github.com/ReGalala/Fairbnb/issues/5)
 
 ## FR-003 — Protected application
 
 Authenticated functionality shall not be accessible to unauthenticated users.
-**Implemented by:** [#3 — Set up ASP.NET Identity and JWT authentication](https://github.com/ReGalala/Fairbnb/issues/3), **and** [#3 — Set up ASP.NET Identity and JWT authentication](https://github.com/ReGalala/Fairbnb/issues/3), [#5 — Set up frontend API connection and auth pages](https://github.com/ReGalala/Fairbnb/issues/5)
+**Implemented by:** [#3 — Set up ASP.NET Identity and JWT authentication](https://github.com/ReGalala/Fairbnb/issues/3) [#5](https://github.com/ReGalala/Fairbnb/issues/5)
 
 ---
 
@@ -1324,12 +1324,12 @@ The backend shall use C# and ASP.NET Core Web API.
 ## TR-002 — Persistence
 
 The backend shall use Entity Framework Core with PostgreSQL.
-**Implemented by:** [#1 — Set up EF Core and database connection](https://github.com/ReGalala/Fairbnb/issues/1)
+**Implemented by:** [#1](https://github.com/ReGalala/Fairbnb/issues/1)
 
 ## TR-003 — Authentication technology
 
 Authentication shall use ASP.NET Identity and JWT-based API authentication.
-**Implemented by:** [#3 — Set up ASP.NET Identity and JWT authentication](https://github.com/ReGalala/Fairbnb/issues/3)
+**Implemented by:** [#3](https://github.com/ReGalala/Fairbnb/issues/3)
 
 ## TR-004 — Frontend technology
 
