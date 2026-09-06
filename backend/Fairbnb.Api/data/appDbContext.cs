@@ -11,4 +11,5 @@ public class AppDbContext : IdentityDbContext
     }
     public DbSet<Unit> Units { get; set;}
     public DbSet<UnitMember> UnitMembers { get; set; }
+    public DbSet<Room> Rooms { get; set;}
 }
