@@ -15,7 +15,7 @@
 
 A person shall be able to create a Fairbnb account using an email address and password.
 
-**Implemented by:** [#3](https://github.com/ReGalala/Fairbnb/issues/3),[#4](https://github.com/ReGalala/Fairbnb/issues/4), [#5](https://github.com/ReGalala/Fairbnb/issues/5)
+**Implemented by:** [#3](https://github.com/ReGalala/Fairbnb/issues/3), [#5](https://github.com/ReGalala/Fairbnb/issues/5)
 
 ## FR-002 — Log in
 
@@ -37,7 +37,7 @@ Authenticated functionality shall not be accessible to unauthenticated users.
 
 An authenticated user shall be able to create a Unit.
 
-**Implemented by:** [#4](https://github.com/ReGalala/Fairbnb/issues/4), [#5](https://github.com/ReGalala/Fairbnb/issues/5), [#6](https://github.com/ReGalala/Fairbnb/issues/6)
+**Implemented by:** [#4](https://github.com/ReGalala/Fairbnb/issues/4), [#6](https://github.com/ReGalala/Fairbnb/issues/6)
 
 ## FR-005 — Unit information
 
@@ -1692,6 +1692,7 @@ Stored system timestamps shall use UTC.
 ## TR-001 — Backend technology
 
 The backend shall use C# and ASP.NET Core Web API.
+**Implemented by:** [#4](https://github.com/ReGalala/Fairbnb/issues/4)
 
 ## TR-002 — Persistence
 
@@ -1708,6 +1709,7 @@ Authentication shall use ASP.NET Identity and JWT-based API authentication.
 ## TR-004 — Frontend technology
 
 The frontend shall use React and TypeScript.
+**Implemented by:** [#5](https://github.com/ReGalala/Fairbnb/issues/5)
 
 ## TR-005 — File storage
 
