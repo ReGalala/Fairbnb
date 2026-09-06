@@ -15,7 +15,7 @@
 
 A person shall be able to create a Fairbnb account using an email address and password.
 
-**Implemented by:** [#3](https://github.com/ReGalala/Fairbnb/issues/3), [#5](https://github.com/ReGalala/Fairbnb/issues/5)
+**Implemented by:** [#3](https://github.com/ReGalala/Fairbnb/issues/3),[#4](https://github.com/ReGalala/Fairbnb/issues/4), [#5](https://github.com/ReGalala/Fairbnb/issues/5)
 
 ## FR-002 — Log in
 
@@ -37,7 +37,7 @@ Authenticated functionality shall not be accessible to unauthenticated users.
 
 An authenticated user shall be able to create a Unit.
 
-**Implemented by:** [#4](https://github.com/ReGalala/Fairbnb/issues/4), [#6](https://github.com/ReGalala/Fairbnb/issues/6)
+**Implemented by:** [#4](https://github.com/ReGalala/Fairbnb/issues/4), [#5](https://github.com/ReGalala/Fairbnb/issues/5), [#6](https://github.com/ReGalala/Fairbnb/issues/6)
 
 ## FR-005 — Unit information
 
