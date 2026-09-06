@@ -14,16 +14,19 @@
 ## FR-001 — Register account
 
 A person shall be able to create a Fairbnb account using an email address and password.
-**Implemented by:** [#3](https://github.com/ReGalala/Fairbnb/issues/3), [#5](https://github.com/ReGalala/Fairbnb/issues/5) 
+
+**Implemented by:** [#3](https://github.com/ReGalala/Fairbnb/issues/3), [#5](https://github.com/ReGalala/Fairbnb/issues/5)
 
 ## FR-002 — Log in
 
 A registered user shall be able to authenticate and access Fairbnb.
+
 **Implemented by:** [#3](https://github.com/ReGalala/Fairbnb/issues/3), [#5](https://github.com/ReGalala/Fairbnb/issues/5)
 
 ## FR-003 — Protected application
 
 Authenticated functionality shall not be accessible to unauthenticated users.
+
 **Implemented by:** [#3](https://github.com/ReGalala/Fairbnb/issues/3), [#5](https://github.com/ReGalala/Fairbnb/issues/5), [#6](https://github.com/ReGalala/Fairbnb/issues/6)
 
 ---
@@ -33,25 +36,32 @@ Authenticated functionality shall not be accessible to unauthenticated users.
 ## FR-004 — Create Unit
 
 An authenticated user shall be able to create a Unit.
+
 **Implemented by:** [#4](https://github.com/ReGalala/Fairbnb/issues/4), [#6](https://github.com/ReGalala/Fairbnb/issues/6)
 
 ## FR-005 — Unit information
 
 A Unit shall contain identifying information including a name and address.
-**Implemented by:** [#2](https://github.com/ReGalala/Fairbnb/issues/2), [#6](https://github.com/ReGalala/Fairbnb/issues/6)
+
+**Implemented by:** [#2](https://github.com/ReGalala/Fairbnb/issues/2), [#6](https://github.com/ReGalala/Fairbnb/issues/6), [#86](https://github.com/ReGalala/Fairbnb/issues/86)
 
 ## FR-006 — Unit membership
 
 Users shall participate in Units through a Unit membership.
 
+**Implemented by:** [#14](https://github.com/ReGalala/Fairbnb/issues/14)
+
 ## FR-007 — View own Units
 
 A user shall be able to view the Units in which they are a member.
-**Implemented by:** [#4](https://github.com/ReGalala/Fairbnb/issues/4), [#6](https://github.com/ReGalala/Fairbnb/issues/6)
+
+**Implemented by:** [#4](https://github.com/ReGalala/Fairbnb/issues/4), [#6](https://github.com/ReGalala/Fairbnb/issues/6), [#14](https://github.com/ReGalala/Fairbnb/issues/14)
 
 ## FR-008 — Unit-level access
 
 A user shall not be able to access data belonging to a Unit in which they are not a member.
+
+**Implemented by:** [#15](https://github.com/ReGalala/Fairbnb/issues/15)
 
 ## FR-009 — Unit roles
 
@@ -62,11 +72,15 @@ A Unit member shall have one of the following permission roles:
 
 Permission role and financial ownership are separate concepts.
 
+**Implemented by:** [#14](https://github.com/ReGalala/Fairbnb/issues/14)
+
 ## FR-010 — Unit creator becomes Admin
 
 The user who creates a Unit shall automatically become a member of that Unit with the Admin role.
 
 The system shall retain information about who originally created the Unit.
+
+**Implemented by:** [#14](https://github.com/ReGalala/Fairbnb/issues/14)
 
 ## FR-011 — Invite Unit member
 
@@ -74,15 +88,21 @@ An Admin shall be able to invite another person to a Unit using an email address
 
 A Unit invitation shall not expire automatically. It shall remain Pending until it is accepted, declined, or removed by an Admin.
 
+**Implemented by:** [#16](https://github.com/ReGalala/Fairbnb/issues/16)
+
 ## FR-012 — Accept invitation
 
 An invited person shall be able to accept a Unit invitation using their Fairbnb account.
 
 Accepting an invitation creates Unit membership but shall not automatically grant financial ownership.
 
+**Implemented by:** [#16](https://github.com/ReGalala/Fairbnb/issues/16)
+
 ## FR-013 — Assign Admin role
 
 An Admin shall be able to grant the Admin role to another active Unit member.
+
+**Implemented by:** [#17](https://github.com/ReGalala/Fairbnb/issues/17)
 
 ## FR-014 — Remove Admin role
 
@@ -90,11 +110,15 @@ An Admin shall be able to remove the Admin role from another Unit member.
 
 The system shall not allow an action that would leave the Unit without at least one active Admin.
 
+**Implemented by:** [#17](https://github.com/ReGalala/Fairbnb/issues/17)
+
 ## FR-015 — Equal Admin access
 
 All Admins within a Unit shall have the same administrative permissions.
 
 Administrative permissions shall not depend on whether the Admin originally created the Unit.
+
+**Implemented by:** [#17](https://github.com/ReGalala/Fairbnb/issues/17)
 
 ## FR-016 — Unit status
 
@@ -107,6 +131,8 @@ A Unit shall support at least the following lifecycle states:
 
 Inactivating a Unit shall not remove its historical information.
 
+**Implemented by:** [#19](https://github.com/ReGalala/Fairbnb/issues/19)
+
 ## FR-017 — Inactivate Unit member
 
 An Admin shall be able to inactivate a Unit member.
@@ -114,6 +140,8 @@ An Admin shall be able to inactivate a Unit member.
 Inactivating a member shall prevent future active participation without deleting the member's historical financial, ownership, payment, or audit information.
 
 The system shall not allow the last active Admin of a Unit to be inactivated.
+
+**Implemented by:** [#17](https://github.com/ReGalala/Fairbnb/issues/17)
 
 ---
 
@@ -148,11 +176,15 @@ This includes, where applicable:
 
 Information that is private to another user's personal workflow, such as another user's saved expense or manual-income templates, shall not be visible.
 
+**Implemented by:** [#53](https://github.com/ReGalala/Fairbnb/issues/53), [#81](https://github.com/ReGalala/Fairbnb/issues/81), [#87](https://github.com/ReGalala/Fairbnb/issues/87), [#88](https://github.com/ReGalala/Fairbnb/issues/88), [#89](https://github.com/ReGalala/Fairbnb/issues/89), [#90](https://github.com/ReGalala/Fairbnb/issues/90), [#91](https://github.com/ReGalala/Fairbnb/issues/91)
+
 ## FR-019 — Add expense
 
 A User shall be able to register an Expense and identify the Unit member who paid it.
 
 The creator of the Expense and the payer may be different Unit members.
+
+**Implemented by:** [#23](https://github.com/ReGalala/Fairbnb/issues/23)
 
 ## FR-020 — Manage own open-period expense
 
@@ -160,13 +192,19 @@ A User shall be able to edit or cancel an Expense they created while its Financi
 
 A User shall not be able to edit or cancel an Expense created by another Unit member.
 
+**Implemented by:** [#25](https://github.com/ReGalala/Fairbnb/issues/25)
+
 ## FR-021 — Manage own expense attachments
 
 A User shall be able to add or remove attachments from an Expense they created while its Financial Period remains open.
 
+**Implemented by:** [#26](https://github.com/ReGalala/Fairbnb/issues/26)
+
 ## FR-022 — Add manual income
 
 A User shall be able to register manual income for a Unit in which they participate.
+
+**Implemented by:** [#30](https://github.com/ReGalala/Fairbnb/issues/30)
 
 ## FR-023 — Manage own open-period manual income
 
@@ -174,13 +212,19 @@ A User shall be able to edit or cancel manual income they created while its Fina
 
 A User shall not be able to edit or cancel manual income created by another Unit member.
 
+**Implemented by:** [#31](https://github.com/ReGalala/Fairbnb/issues/31)
+
 ## FR-024 — Record payment to member
 
 A User shall be able to record a Payment they have made to another Unit member.
 
+**Implemented by:** [#46](https://github.com/ReGalala/Fairbnb/issues/46)
+
 ## FR-025 — Confirm received payment
 
 A User shall be able to confirm a Payment another Unit member has recorded as being paid to them.
+
+**Implemented by:** [#47](https://github.com/ReGalala/Fairbnb/issues/47)
 
 ## FR-026 — View personal financial position
 
@@ -199,6 +243,8 @@ This includes, where applicable:
 
 - incoming payments awaiting their confirmation
 - rejected outgoing payments that require attention
+
+**Implemented by:** [#60](https://github.com/ReGalala/Fairbnb/issues/60)
 
 ---
 
@@ -222,11 +268,15 @@ This includes, where applicable:
 - CSV imports
 - Financial Periods
 
+**Implemented by:** [#82](https://github.com/ReGalala/Fairbnb/issues/82), [#86](https://github.com/ReGalala/Fairbnb/issues/86)
+
 ## FR-028 — Admin financial management
 
 An Admin shall be able to manage financial records belonging to other Unit members while the relevant Financial Period remains open, where administrative correction is required.
 
 Administrative changes shall remain auditable.
+
+**Implemented by:** [#50](https://github.com/ReGalala/Fairbnb/issues/50)
 
 ## FR-029 — Admin period management
 
@@ -239,6 +289,8 @@ An Admin shall be able to:
 
 Closing and reopening actions shall remain auditable.
 
+**Implemented by:** [#84](https://github.com/ReGalala/Fairbnb/issues/84)
+
 ---
 
 # 5. Rooms
@@ -247,19 +299,27 @@ Closing and reopening actions shall remain auditable.
 
 A Unit shall be able to contain multiple Rooms.
 
+**Implemented by:** [#18](https://github.com/ReGalala/Fairbnb/issues/18)
+
 ## FR-031 — Manage Rooms
 
 Admins shall be able to create, edit and deactivate Rooms belonging to a Unit.
 
+**Implemented by:** [#18](https://github.com/ReGalala/Fairbnb/issues/18)
+
 ## FR-032 — Room history
 
 Deactivating or renaming a Room shall not remove historical information associated with it.
+
+**Implemented by:** [#18](https://github.com/ReGalala/Fairbnb/issues/18), [#91](https://github.com/ReGalala/Fairbnb/issues/91)
 
 ## FR-033 — External Room aliases
 
 A Room shall be able to have multiple external listing names or aliases.
 
 Different external listing names shall therefore be able to resolve to the same internal Room.
+
+**Implemented by:** [#18](https://github.com/ReGalala/Fairbnb/issues/18)
 
 ---
 
@@ -271,17 +331,25 @@ A Unit member may have a financial ownership percentage in that Unit.
 
 Ownership in one Unit shall not imply ownership in another Unit.
 
+**Implemented by:** [#20](https://github.com/ReGalala/Fairbnb/issues/20)
+
 ## FR-035 — Different ownership percentages
 
 Different members of a Unit may have different ownership percentages.
+
+**Implemented by:** [#20](https://github.com/ReGalala/Fairbnb/issues/20)
 
 ## FR-036 — Manage ownership
 
 An Admin shall be able to manage ownership percentages within the Unit.
 
+**Implemented by:** [#20](https://github.com/ReGalala/Fairbnb/issues/20)
+
 ## FR-037 — Ownership history
 
 Changes to ownership shall create historical ownership records rather than replacing previous ownership information.
+
+**Implemented by:** [#20](https://github.com/ReGalala/Fairbnb/issues/20), [#87](https://github.com/ReGalala/Fairbnb/issues/87)
 
 ## FR-038 — Ownership validity period
 
@@ -289,11 +357,15 @@ An ownership share shall belong to a specific Financial Period and represent the
 
 Ownership changes shall take effect at a Financial Period boundary rather than mid-period.
 
+**Implemented by:** [#20](https://github.com/ReGalala/Fairbnb/issues/20)
+
 ## FR-039 — Historical calculations
 
 Financial calculations shall use the ownership percentages that were valid for the relevant Financial Period.
 
 Ownership changes shall take effect at a Financial Period boundary and shall not retroactively alter saved historical splits or calculations.
+
+**Implemented by:** [#20](https://github.com/ReGalala/Fairbnb/issues/20)
 
 ---
 
@@ -303,25 +375,37 @@ Ownership changes shall take effect at a Financial Period boundary and shall not
 
 Each Unit shall have its own monthly Financial Periods.
 
+**Implemented by:** [#21](https://github.com/ReGalala/Fairbnb/issues/21)
+
 ## FR-041 — Financial Period status
 
 A Financial Period shall be either Open or Closed.
+
+**Implemented by:** [#21](https://github.com/ReGalala/Fairbnb/issues/21)
 
 ## FR-042 — Open Financial Period
 
 Financial information may be added or modified while its Financial Period is Open, subject to user permissions.
 
+**Implemented by:** [#21](https://github.com/ReGalala/Fairbnb/issues/21)
+
 ## FR-043 — Settlement preview
 
 An Admin shall be able to preview the financial result and settlement before closing a Financial Period.
+
+**Implemented by:** [#54](https://github.com/ReGalala/Fairbnb/issues/54)
 
 ## FR-044 — Close Financial Period
 
 An Admin shall be able to close a Financial Period.
 
+**Implemented by:** [#21](https://github.com/ReGalala/Fairbnb/issues/21), [#55](https://github.com/ReGalala/Fairbnb/issues/55)
+
 ## FR-045 — Closed Financial Period
 
 Financial information belonging to a Closed Financial Period shall be protected from normal modification.
+
+**Implemented by:** [#21](https://github.com/ReGalala/Fairbnb/issues/21)
 
 ## FR-046 — Reopen Financial Period
 
@@ -331,6 +415,8 @@ The system shall make clear that correcting an error in the current/new Open Fin
 
 Reopening shall require an explicit confirmation and a reason, and shall remain traceable in Audit History.
 
+**Implemented by:** [#21](https://github.com/ReGalala/Fairbnb/issues/21), [#55](https://github.com/ReGalala/Fairbnb/issues/55)
+
 ---
 
 # 8. CSV Imports and Imported Income
@@ -339,31 +425,45 @@ Reopening shall require an explicit confirmation and a reason, and shall remain 
 
 An Admin shall be able to upload a CSV file containing external rental income information for a Unit.
 
+**Implemented by:** [#35](https://github.com/ReGalala/Fairbnb/issues/35)
+
 ## FR-048 — Import belongs to one Unit
 
 Each CSV import shall belong to exactly one Unit.
 
 A single CSV may contain information relating to several Rooms belonging to that Unit.
 
+**Implemented by:** [#35](https://github.com/ReGalala/Fairbnb/issues/35)
+
 ## FR-049 — Retain source CSV
 
 The original uploaded CSV file shall be retained.
+
+**Implemented by:** [#35](https://github.com/ReGalala/Fairbnb/issues/35)
 
 ## FR-050 — View imported file
 
 Unit members shall be able to view the source CSV file and information about a previous import.
 
+**Implemented by:** [#42](https://github.com/ReGalala/Fairbnb/issues/42)
+
 ## FR-051 — Import traceability
 
 Every ImportedIncome record shall remain traceable to the CsvImport from which it originated.
+
+**Implemented by:** [#40](https://github.com/ReGalala/Fairbnb/issues/40)
 
 ## FR-052 — Imported income period
 
 Imported income shall belong to the appropriate Financial Period of the Unit.
 
+**Implemented by:** [#40](https://github.com/ReGalala/Fairbnb/issues/40)
+
 ## FR-053 — Imported income Room
 
 Imported income may optionally be associated with a Room.
+
+**Implemented by:** [#40](https://github.com/ReGalala/Fairbnb/issues/40)
 
 ## FR-054 — Extract imported information
 
@@ -437,15 +537,21 @@ The normalized import representation shall preserve, where present:
 
 - earnings year
 
+**Implemented by:** [#36](https://github.com/ReGalala/Fairbnb/issues/36)
+
 ## FR-055 — Correlate imported rows
 
 The importer shall support situations in which multiple CSV rows belong to the same reservation or external transaction group.
 
 The Airbnb confirmation code may be used as a grouping key, but it shall not be treated as a unique row identifier. The validated sample contains multiple transaction rows with the same confirmation code.
 
+**Implemented by:** [#36](https://github.com/ReGalala/Fairbnb/issues/36)
+
 ## FR-056 — Match listing aliases
 
 External listing names shall be matched to Rooms using Room aliases.
+
+**Implemented by:** [#38](https://github.com/ReGalala/Fairbnb/issues/38)
 
 ## FR-057 — Unknown listing handling
 
@@ -453,11 +559,15 @@ When an external listing cannot be matched, an Admin shall be able to associate 
 
 The chosen mapping may be saved as a Room alias for future imports.
 
+**Implemented by:** [#38](https://github.com/ReGalala/Fairbnb/issues/38)
+
 ## FR-058 — Imported income integrity
 
 Imported financial records shall preserve the financial information from their source import and shall be read-only in Fairbnb.
 
 Fairbnb shall not manually edit or correct ImportedIncome records. Airbnb-provided corrections shall arrive through subsequent CSV data and remain traceable to their own source import.
+
+**Implemented by:** [#41](https://github.com/ReGalala/Fairbnb/issues/41)
 
 ## FR-059 — Duplicate import protection
 
@@ -472,6 +582,8 @@ A confirmation code alone shall not be used as the duplicate key because several
 
 Detected duplicate rows shall not be imported a second time unless an Admin explicitly resolves the row as a legitimate non-duplicate.
 
+**Implemented by:** [#37](https://github.com/ReGalala/Fairbnb/issues/37)
+
 ---
 
 # 9. Manual Income
@@ -479,6 +591,8 @@ Detected duplicate rows shall not be imported a second time unless an Admin expl
 ## FR-060 — Register manual income
 
 A Unit member shall be able to register income that did not originate from an imported CSV.
+
+**Implemented by:** [#30](https://github.com/ReGalala/Fairbnb/issues/30)
 
 ## FR-061 — Manual income information
 
@@ -496,9 +610,13 @@ Manual income shall support at least:
 - description/source
 - creator
 
+**Implemented by:** [#30](https://github.com/ReGalala/Fairbnb/issues/30)
+
 ## FR-062 — No reservation required
 
 Manual income shall not require an existing reservation or known guest.
+
+**Implemented by:** [#30](https://github.com/ReGalala/Fairbnb/issues/30)
 
 ---
 
@@ -509,6 +627,8 @@ Manual income shall not require an existing reservation or known guest.
 A Unit member shall be able to register an Expense and identify the Unit member who paid it.
 
 The creator of the Expense and the payer may be different Unit members.
+
+**Implemented by:** [#23](https://github.com/ReGalala/Fairbnb/issues/23)
 
 ## FR-064 — Expense information
 
@@ -528,11 +648,15 @@ An Expense shall record at least:
 
 - optional Room/scope
 
+**Implemented by:** [#23](https://github.com/ReGalala/Fairbnb/issues/23)
+
 ## FR-065 — Expense currency
 
 An Expense shall be recorded in either USD or EGP.
 
 The selected currency shall be preserved. An Expense shall participate only in settlement calculations for that same currency and shall not be automatically converted for settlement.
+
+**Implemented by:** [#23](https://github.com/ReGalala/Fairbnb/issues/23)
 
 ## FR-066 — Expense Room/scope
 
@@ -540,13 +664,19 @@ An Expense may optionally be associated with a Room.
 
 If no Room is specified, the Expense applies to the Unit as a whole.
 
+**Implemented by:** [#23](https://github.com/ReGalala/Fairbnb/issues/23)
+
 ## FR-067 — Expense participants
 
 Each Expense shall record which financial owners participate in sharing that Expense.
 
+**Implemented by:** [#24](https://github.com/ReGalala/Fairbnb/issues/24)
+
 ## FR-068 — Default expense participants
 
 By default, all financial owners whose ownership is effective for the Expense's Financial Period shall be selected as participants.
+
+**Implemented by:** [#24](https://github.com/ReGalala/Fairbnb/issues/24)
 
 ## FR-069 — Exclude owner from specific expense
 
@@ -555,6 +685,8 @@ The creator, or an Admin where permitted, shall be able to exclude one or more f
 The remaining selected participants shall share the Expense proportionally according to their effective ownership percentages, normalized across the selected participants so that the saved ExpenseSplit amounts equal the full Expense amount.
 
 The payer does not determine who must participate in the split.
+
+**Implemented by:** [#24](https://github.com/ReGalala/Fairbnb/issues/24)
 
 ## FR-070 — Expense attachments
 
@@ -566,6 +698,8 @@ An Expense may contain zero or more attachments such as:
 - supporting documents
 
 Saved ExpenseSplit participants and amounts shall remain historical snapshots and shall not change because ownership percentages change later.
+
+**Implemented by:** [#26](https://github.com/ReGalala/Fairbnb/issues/26)
 
 ---
 
@@ -579,15 +713,21 @@ Fairbnb may provide predefined system categories that can be used across Units. 
 
 All active Unit members shall be able to see and use the expense categories available to their Unit.
 
+**Implemented by:** [#22](https://github.com/ReGalala/Fairbnb/issues/22)
+
 ## FR-072 — Manage categories
 
 Admins shall be able to create, rename and deactivate Unit-specific expense categories.
 
 System categories are not owned by an individual Unit and shall not be editable as Unit-specific categories.
 
+**Implemented by:** [#22](https://github.com/ReGalala/Fairbnb/issues/22)
+
 ## FR-073 — Preserve used categories
 
 A category that has been used historically shall not be permanently removed in a way that destroys historical information.
+
+**Implemented by:** [#22](https://github.com/ReGalala/Fairbnb/issues/22)
 
 ---
 
@@ -600,9 +740,13 @@ When creating an Expense, a user shall be able to choose whether the Expense is:
 - a one-time Expense
 - also saved as a reusable expense template
 
+**Implemented by:** [#27](https://github.com/ReGalala/Fairbnb/issues/27)
+
 ## FR-075 — Template ownership
 
 A saved expense template shall belong to the Unit member who created it for that Unit.
+
+**Implemented by:** [#27](https://github.com/ReGalala/Fairbnb/issues/27)
 
 ## FR-076 — Private saved templates
 
@@ -610,9 +754,13 @@ A Unit member shall only be able to view and manage their own saved expense temp
 
 Saved templates belonging to other Unit members shall not be visible.
 
+**Implemented by:** [#27](https://github.com/ReGalala/Fairbnb/issues/27)
+
 ## FR-077 — Reuse saved expense
 
 A User shall be able to select one of their saved expense templates and use it as the basis for creating a new Expense.
+
+**Implemented by:** [#29](https://github.com/ReGalala/Fairbnb/issues/29)
 
 ## FR-078 — Edit reused expense
 
@@ -632,11 +780,15 @@ This may include:
 - participating owners
 - attachments
 
+**Implemented by:** [#29](https://github.com/ReGalala/Fairbnb/issues/29)
+
 ## FR-079 — Edit saved expense template
 
 A User shall be able to edit their own saved expense templates.
 
 Changes to a template shall affect future use of that template and shall not modify Expenses that were created from it previously.
+
+**Implemented by:** [#28](https://github.com/ReGalala/Fairbnb/issues/28)
 
 ## FR-080 — Remove saved expense template
 
@@ -644,11 +796,15 @@ A User shall be able to remove their own saved expense template when it is no lo
 
 Removing the template shall not remove historical Expenses that were created using it.
 
+**Implemented by:** [#28](https://github.com/ReGalala/Fairbnb/issues/28)
+
 ## FR-081 — Explicit creation of Expense
 
 A saved expense template shall never automatically create a financial Expense.
 
 An actual Expense shall only be created when a User explicitly chooses to use and submit the saved template.
+
+**Implemented by:** [#29](https://github.com/ReGalala/Fairbnb/issues/29)
 
 ---
 
@@ -658,17 +814,23 @@ An actual Expense shall only be created when a User explicitly chooses to use an
 
 Fairbnb shall calculate settlements for each Unit and Financial Period.
 
+**Implemented by:** [#43](https://github.com/ReGalala/Fairbnb/issues/43)
+
 ## FR-083 — Settlement per currency
 
 Settlement balances shall remain separate by currency.
 
 USD and EGP shall never automatically offset each other.
 
+**Implemented by:** [#43](https://github.com/ReGalala/Fairbnb/issues/43)
+
 ## FR-084 — Member Settlement Balance
 
 A Settlement shall record the resulting balance for each participating Unit member.
 
 The balance represents what that member should ultimately receive or contribute for that Settlement and currency.
+
+**Implemented by:** [#43](https://github.com/ReGalala/Fairbnb/issues/43)
 
 ## FR-085 — Settlement calculation
 
@@ -683,6 +845,8 @@ Settlement balances shall be calculated using applicable:
 - Financial Period
 - confirmed member-to-member payments where relevant to the outstanding pair balance
 
+**Implemented by:** [#43](https://github.com/ReGalala/Fairbnb/issues/43)
+
 ---
 
 # 14. Payments Between Members
@@ -691,9 +855,13 @@ Settlement balances shall be calculated using applicable:
 
 A Unit member shall be able to record that they have paid money to another Unit member.
 
+**Implemented by:** [#46](https://github.com/ReGalala/Fairbnb/issues/46)
+
 ## FR-087 — Payment parties
 
 A Payment shall identify both the sender and recipient.
+
+**Implemented by:** [#46](https://github.com/ReGalala/Fairbnb/issues/46)
 
 ## FR-088 — Payment information
 
@@ -713,11 +881,15 @@ A Payment shall record at least:
 
 - confirmation information where applicable
 
+**Implemented by:** [#46](https://github.com/ReGalala/Fairbnb/issues/46)
+
 ## FR-089 — Debt/settlement context
 
 A Payment may be associated with the relevant Unit, member pair, currency, and settlement context.
 
 A Payment does not need to be assigned to a specific Expense.
+
+**Implemented by:** [#67](https://github.com/ReGalala/Fairbnb/issues/67)
 
 ## FR-090 — Pending payment
 
@@ -725,11 +897,15 @@ A newly registered Payment shall initially have Pending status.
 
 A Pending payment shall not reduce the outstanding debt.
 
+**Implemented by:** [#46](https://github.com/ReGalala/Fairbnb/issues/46)
+
 ## FR-091 — Confirm payment
 
 The recipient shall be able to confirm that the Payment was received.
 
 Only a Confirmed payment shall reduce the corresponding outstanding member-pair balance in that currency.
+
+**Implemented by:** [#47](https://github.com/ReGalala/Fairbnb/issues/47)
 
 ## FR-092 — Payment confirmation history
 
@@ -743,6 +919,8 @@ The system shall retain, where applicable:
 
 - later resend/delete actions
 
+**Implemented by:** [#47](https://github.com/ReGalala/Fairbnb/issues/47)
+
 ## FR-093 — Payment status
 
 Payments shall support at least the following user-visible statuses:
@@ -754,6 +932,8 @@ Payments shall support at least the following user-visible statuses:
 
 A deleted pre-confirmation Payment is no longer an active Payment but its deletion action shall remain auditable.
 
+**Implemented by:** [#49](https://github.com/ReGalala/Fairbnb/issues/49)
+
 ---
 
 # 15. Corrections and Financial History
@@ -762,17 +942,23 @@ A deleted pre-confirmation Payment is no longer an active Payment but its deleti
 
 Important financial records shall have human-readable reference numbers in addition to internal database identifiers where useful for traceability.
 
+**Implemented by:** [#68](https://github.com/ReGalala/Fairbnb/issues/68)
+
 ## FR-095 — Correct closed-period record
 
 A financial record belonging to a Closed Financial Period shall not be edited directly during normal correction handling.
 
 If a financial record is incorrect, the normal correction shall be made in a new Open Financial Period.
 
+**Implemented by:** [#51](https://github.com/ReGalala/Fairbnb/issues/51)
+
 ## FR-096 — Create closed-period correction
 
 When a closed-period Expense or ManualIncome record must be corrected, the correction shall be created in a current Open Financial Period and shall reference the incorrect historical record.
 
 The correction flow shall allow the original amount and the correct amount to be identified without modifying the closed historical record.
+
+**Implemented by:** [#51](https://github.com/ReGalala/Fairbnb/issues/51)
 
 ## FR-097 — Settle correction difference
 
@@ -782,15 +968,21 @@ Only that calculated difference shall participate in settlement in the current O
 
 For example, if a historical amount was 1,000 EGP and the correct amount is 800 EGP, the correction adjustment shall be -200 EGP rather than a -1,000 EGP reversal followed by a new 800 EGP entry.
 
+**Implemented by:** [#51](https://github.com/ReGalala/Fairbnb/issues/51)
+
 ## FR-098 — Correction relationship
 
 A correction entry shall retain a reference to the historical financial record it corrects and shall preserve the original amount, correct amount, calculated adjustment amount, and correction reason where applicable.
 
 Historical adjusted statistics may use the correction relationship to show the corrected historical value without modifying the original closed record.
 
+**Implemented by:** [#51](https://github.com/ReGalala/Fairbnb/issues/51)
+
 ## FR-099 — Preserve financial history
 
 Financial information that has become part of the historical record shall normally be cancelled, deactivated, corrected, credited, or reversed rather than physically deleted.
+
+**Implemented by:** [#69](https://github.com/ReGalala/Fairbnb/issues/69)
 
 ---
 
@@ -800,6 +992,8 @@ Financial information that has become part of the historical record shall normal
 
 Important financial and administrative actions shall be recorded in an Audit History.
 
+**Implemented by:** [#52](https://github.com/ReGalala/Fairbnb/issues/52)
+
 ## FR-101 — Audit actor and time
 
 An Audit entry shall identify, where applicable:
@@ -807,9 +1001,13 @@ An Audit entry shall identify, where applicable:
 - who performed the action
 - when the action occurred
 
+**Implemented by:** [#52](https://github.com/ReGalala/Fairbnb/issues/52)
+
 ## FR-102 — Audit changed values
 
 Where appropriate, Audit History shall retain previous and new values.
+
+**Implemented by:** [#52](https://github.com/ReGalala/Fairbnb/issues/52)
 
 ---
 
@@ -818,6 +1016,8 @@ Where appropriate, Audit History shall retain previous and new values.
 ## FR-103 — Unit financial overview
 
 Users shall be able to view a financial overview for Units in which they participate.
+
+**Implemented by:** [#59](https://github.com/ReGalala/Fairbnb/issues/59)
 
 ## FR-104 — Personal financial overview
 
@@ -834,9 +1034,13 @@ This may include:
 - pending payment confirmations
 - outgoing Pending or Rejected payments needing attention
 
+**Implemented by:** [#60](https://github.com/ReGalala/Fairbnb/issues/60)
+
 ## FR-105 — Period reporting
 
 Users shall be able to view monthly and annual financial information.
+
+**Implemented by:** [#61](https://github.com/ReGalala/Fairbnb/issues/61)
 
 ## FR-106 — Room statistics
 
@@ -852,9 +1056,13 @@ Statistics may include:
 
 - occupancy-related information
 
+**Implemented by:** [#62](https://github.com/ReGalala/Fairbnb/issues/62)
+
 ## FR-107 — Currency visibility
 
 Reports and dashboards shall clearly identify the currency associated with financial amounts.
+
+**Implemented by:** [#59](https://github.com/ReGalala/Fairbnb/issues/59), [#61](https://github.com/ReGalala/Fairbnb/issues/61)
 
 ---
 
@@ -866,6 +1074,8 @@ The intended recipient of a Pending Payment shall be able to reject it when they
 
 A Rejected Payment shall not reduce debt.
 
+**Implemented by:** [#47](https://github.com/ReGalala/Fairbnb/issues/47)
+
 ## FR-109 — Sender may delete own Pending Payment
 
 The sender shall be able to delete their own Pending Payment before it has been confirmed.
@@ -874,9 +1084,13 @@ This supports correction of a Payment entered by mistake.
 
 The deletion action shall remain auditable.
 
+**Implemented by:** [#48](https://github.com/ReGalala/Fairbnb/issues/48)
+
 ## FR-110 — Rejected Payment remains visible to sender
 
 A Rejected Payment shall remain visible to its sender with Rejected status until the sender takes further action.
+
+**Implemented by:** [#48](https://github.com/ReGalala/Fairbnb/issues/48)
 
 ## FR-111 — Resend Rejected Payment
 
@@ -886,17 +1100,23 @@ Resending shall return it to Pending status and require the recipient to confirm
 
 The previous rejection and resend shall remain traceable.
 
+**Implemented by:** [#48](https://github.com/ReGalala/Fairbnb/issues/48)
+
 ## FR-112 — Delete Rejected Payment
 
 The sender shall be able to delete their own Rejected Payment.
 
 The deletion action shall remain auditable.
 
+**Implemented by:** [#48](https://github.com/ReGalala/Fairbnb/issues/48)
+
 ## FR-113 — Confirmed Payment is final
 
 A Confirmed Payment shall not be deletable by the sender through the normal Payment workflow.
 
 Any later correction shall use an explicit traceable correction process rather than removing the confirmed historical record.
+
+**Implemented by:** [#49](https://github.com/ReGalala/Fairbnb/issues/49)
 
 ## FR-114 — Pairwise debt aggregation
 
@@ -908,6 +1128,8 @@ Outstanding settlement debt shall be aggregated by:
 - currency
 
 Multiple contributing financial items between the same member pair and currency shall therefore appear as one headline outstanding balance.
+
+**Implemented by:** [#44](https://github.com/ReGalala/Fairbnb/issues/44)
 
 ## FR-115 — Pairwise balance drill-down
 
@@ -921,13 +1143,19 @@ Contributing items may include:
 - prior corrections/adjustments
 - Confirmed Payments
 
+**Implemented by:** [#45](https://github.com/ReGalala/Fairbnb/issues/45)
+
 ## FR-116 — No cross-currency netting
 
 Pairwise balances in different currencies shall remain separate even when the same two members owe each other money in more than one currency.
 
+**Implemented by:** [#44](https://github.com/ReGalala/Fairbnb/issues/44)
+
 ## FR-117 — Pairwise settlement method
 
 Fairbnb shall use pairwise net balances between members and shall not perform complex graph-based transfer optimization in the current scope.
+
+**Implemented by:** [#44](https://github.com/ReGalala/Fairbnb/issues/44)
 
 ## FR-118 — Review CSV before import
 
@@ -943,6 +1171,8 @@ The review shall show at least:
 
 - number of rows that will actually be imported
 
+**Implemented by:** [#39](https://github.com/ReGalala/Fairbnb/issues/39)
+
 ## FR-119 — Review Room mappings before import
 
 During CSV review, an Admin shall be able to:
@@ -957,9 +1187,13 @@ During CSV review, an Admin shall be able to:
 
 If a row is left without a Room mapping, the ImportedIncome record shall be stored with no Room association.
 
+**Implemented by:** [#38](https://github.com/ReGalala/Fairbnb/issues/38)
+
 ## FR-120 — Confirm CSV import
 
 ImportedIncome records shall only be created after the Admin explicitly confirms the reviewed import.
+
+**Implemented by:** [#39](https://github.com/ReGalala/Fairbnb/issues/39)
 
 ## FR-121 — Airbnb CSV currency
 
@@ -967,15 +1201,21 @@ Airbnb CSV income shall be treated as USD income.
 
 The imported source currency shall remain USD and shall not be automatically converted on the Income screen.
 
+**Implemented by:** [#41](https://github.com/ReGalala/Fairbnb/issues/41)
+
 ## FR-122 — Manual income currency
 
 Manual income shall allow the creator to choose USD or EGP.
 
 The original selected currency shall be preserved.
 
+**Implemented by:** [#30](https://github.com/ReGalala/Fairbnb/issues/30)
+
 ## FR-123 — Separate Income currencies
 
 USD and EGP income shall remain separate in the normal Income view and in settlement calculations.
+
+**Implemented by:** [#70](https://github.com/ReGalala/Fairbnb/issues/70)
 
 ## FR-124 — Combined reporting conversion
 
@@ -985,13 +1225,19 @@ The underlying EGP financial records shall not be modified by this conversion.
 
 The exchange-rate source and rate-date policy remain implementation details to be selected separately.
 
+**Implemented by:** [#64](https://github.com/ReGalala/Fairbnb/issues/64)
+
 ## FR-125 — Unit may exist before Rooms are configured
 
 A newly created Unit may temporarily exist without any Rooms while setup is incomplete.
 
+**Implemented by:** [#19](https://github.com/ReGalala/Fairbnb/issues/19)
+
 ## FR-126 — Unit activation requires Room
 
 A Unit shall not become Active until at least one Room has been created.
+
+**Implemented by:** [#19](https://github.com/ReGalala/Fairbnb/issues/19)
 
 ## FR-127 — Reactivate inactive Unit
 
@@ -999,17 +1245,23 @@ A Unit Admin shall be able to reactivate an inactive Unit later, provided the Un
 
 Reactivation shall not create a new Unit or discard history.
 
+**Implemented by:** [#19](https://github.com/ReGalala/Fairbnb/issues/19)
+
 ## FR-128 — Close Period confirmation
 
 Before a Financial Period is closed, Fairbnb shall show an explicit confirmation explaining that normal edits will stop and the period will become historical.
 
 The confirmation shall surface important outstanding information such as balances and Pending payment confirmations so the Admin can review them before closing.
 
+**Implemented by:** [#54](https://github.com/ReGalala/Fairbnb/issues/54), [#55](https://github.com/ReGalala/Fairbnb/issues/55)
+
 ## FR-129 — Reopen Period confirmation and reason
 
 Reopening a Closed Financial Period shall require an explicit confirmation and an entered reason.
 
 The confirmation shall warn that reopening is exceptional and that normal corrections should usually be made in a current/new Open Financial Period.
+
+**Implemented by:** [#55](https://github.com/ReGalala/Fairbnb/issues/55)
 
 ## FR-130 — Cancel open-period financial entry
 
@@ -1022,6 +1274,8 @@ When an Expense or ManualIncome entry is cancelled while its period is Open:
 - its original values and cancellation event shall remain visible in history/Audit History
 
 Closing an edit form without saving shall be a separate action from cancelling the financial entry.
+
+**Implemented by:** [#25](https://github.com/ReGalala/Fairbnb/issues/25), [#31](https://github.com/ReGalala/Fairbnb/issues/31)
 
 ## FR-131 — Audit entry details
 
@@ -1040,29 +1294,43 @@ Users with access to Audit History shall be able to open an Audit entry and view
 
 Audit events shall be append-only and shall not be rewritten by later corrections.
 
+**Implemented by:** [#53](https://github.com/ReGalala/Fairbnb/issues/53)
+
 ## FR-132 — Monthly settlement email
 
 When an Admin closes a Financial Period, Fairbnb shall send the monthly settlement summary to the participating Unit members.
+
+**Implemented by:** [#56](https://github.com/ReGalala/Fairbnb/issues/56)
 
 ## FR-133 — Payment confirmation email
 
 When a member records a Payment that requires recipient confirmation, Fairbnb shall notify the recipient by email that a Payment is awaiting confirmation.
 
+**Implemented by:** [#57](https://github.com/ReGalala/Fairbnb/issues/57)
+
 ## FR-134 — Rejection visibility
 
 When a recipient rejects a Payment, Fairbnb shall clearly notify or surface that rejection to the sender so the sender can review, resend, or delete the Payment.
+
+**Implemented by:** [#58](https://github.com/ReGalala/Fairbnb/issues/58)
 
 ## FR-135 — Register routing
 
 After registration, a newly registered user shall be routed to the Get Started flow rather than directly to the Dashboard.
 
+**Implemented by:** [#65](https://github.com/ReGalala/Fairbnb/issues/65)
+
 ## FR-136 — Login routing with Unit
 
 After login, a user who belongs to at least one Unit shall be routed to the logged-in application/Dashboard using an available Unit context.
 
+**Implemented by:** [#65](https://github.com/ReGalala/Fairbnb/issues/65)
+
 ## FR-137 — Login routing without Unit
 
 After login, a user who belongs to no Units shall be routed to the Get Started flow.
+
+**Implemented by:** [#65](https://github.com/ReGalala/Fairbnb/issues/65)
 
 ## FR-138 — Get Started choices
 
@@ -1070,6 +1338,8 @@ The Get Started flow shall support at least:
 
 - creating a new Unit
 - accepting/joining a Unit invitation
+
+**Implemented by:** [#66](https://github.com/ReGalala/Fairbnb/issues/66)
 
 ---
 
@@ -1079,15 +1349,21 @@ The Get Started flow shall support at least:
 
 When creating ManualIncome, a User shall be able to save the entered information as a reusable manual-income template for future use.
 
+**Implemented by:** [#32](https://github.com/ReGalala/Fairbnb/issues/32)
+
 ## FR-140 — Manual-income template ownership and privacy
 
 A saved manual-income template shall belong to the Unit member who created it for that Unit.
 
 A Unit member shall only be able to view and manage their own saved manual-income templates for that Unit. Templates belonging to other Unit members shall not be visible.
 
+**Implemented by:** [#32](https://github.com/ReGalala/Fairbnb/issues/32)
+
 ## FR-141 — Reuse saved manual income
 
 A User shall be able to select one of their saved manual-income templates and use it as the basis for creating a new ManualIncome record.
+
+**Implemented by:** [#34](https://github.com/ReGalala/Fairbnb/issues/34)
 
 ## FR-142 — Edit reused manual income
 
@@ -1101,17 +1377,23 @@ Before submitting ManualIncome created from a saved template, the User shall be 
 
 - Room
 
+**Implemented by:** [#34](https://github.com/ReGalala/Fairbnb/issues/34)
+
 ## FR-143 — Manage saved manual-income template
 
 A User shall be able to edit or remove their own saved manual-income templates.
 
 Changes to or removal of a template shall not modify historical ManualIncome records that were previously created from it.
 
+**Implemented by:** [#33](https://github.com/ReGalala/Fairbnb/issues/33)
+
 ## FR-144 — Explicit creation of ManualIncome
 
 A saved manual-income template shall never automatically create ManualIncome.
 
 An actual ManualIncome record shall only be created when a User explicitly chooses to use and submit the template.
+
+**Implemented by:** [#34](https://github.com/ReGalala/Fairbnb/issues/34)
 
 ---
 
@@ -1121,23 +1403,33 @@ An actual ManualIncome record shall only be created when a User explicitly choos
 
 Financial information and calculations shall be isolated by Unit.
 
+**Implemented by:** [#80](https://github.com/ReGalala/Fairbnb/issues/80)
+
 ## BR-002 — Ownership totals 100% before settlement
 
 Ownership shares may total less than 100% while a Unit or Financial Period is being configured.
 
 Before a Settlement can be finalized, the ownership shares for that Financial Period shall total 100%.
 
+**Implemented by:** [#20](https://github.com/ReGalala/Fairbnb/issues/20)
+
 ## BR-003 — One ownership share per member and period
 
 A Unit member shall have at most one OwnershipShare for a particular Financial Period.
+
+**Implemented by:** [#20](https://github.com/ReGalala/Fairbnb/issues/20)
 
 ## BR-004 — Unique Financial Period
 
 A Unit may have only one Financial Period for a particular year and month.
 
+**Implemented by:** [#21](https://github.com/ReGalala/Fairbnb/issues/21)
+
 ## BR-005 — ExpenseSplit total
 
 The sum of saved ExpenseSplit amounts for an Expense shall equal the total Expense amount.
+
+**Implemented by:** [#24](https://github.com/ReGalala/Fairbnb/issues/24)
 
 ## BR-006 — Expense participants are explicit
 
@@ -1145,41 +1437,61 @@ The participants saved for an Expense determine who bears that Expense.
 
 An owner may be excluded from one specific Expense without changing their Unit ownership percentage.
 
+**Implemented by:** [#24](https://github.com/ReGalala/Fairbnb/issues/24)
+
 ## BR-007 — ExpenseSplit is historical
 
 Saved ExpenseSplit participants and amounts shall not change when Unit ownership changes later.
+
+**Implemented by:** [#24](https://github.com/ReGalala/Fairbnb/issues/24)
 
 ## BR-008 — Separate currencies
 
 Amounts in different currencies shall not automatically be combined or netted for settlement.
 
+**Implemented by:** [#43](https://github.com/ReGalala/Fairbnb/issues/43)
+
 ## BR-009 — One CSV import belongs to one Unit
 
 A CsvImport belongs to one Unit only, even when it contains information relating to several Rooms.
+
+**Implemented by:** [#35](https://github.com/ReGalala/Fairbnb/issues/35)
 
 ## BR-010 — CSV row is not necessarily a reservation
 
 The importer shall not assume that one CSV row represents one reservation.
 
+**Implemented by:** [#36](https://github.com/ReGalala/Fairbnb/issues/36)
+
 ## BR-011 — Imported source traceability
 
 Imported income shall remain linked to its original source CSV.
+
+**Implemented by:** [#40](https://github.com/ReGalala/Fairbnb/issues/40)
 
 ## BR-012 — Airbnb CSV is USD
 
 Income originating from the Airbnb CSV is USD in Fairbnb.
 
+**Implemented by:** [#41](https://github.com/ReGalala/Fairbnb/issues/41)
+
 ## BR-013 — Manual income preserves chosen currency
 
 ManualIncome retains the USD or EGP currency selected when it was recorded.
+
+**Implemented by:** [#30](https://github.com/ReGalala/Fairbnb/issues/30)
 
 ## BR-014 — Historical ownership
 
 Historical financial calculations shall not change merely because ownership changes later.
 
+**Implemented by:** [#20](https://github.com/ReGalala/Fairbnb/issues/20)
+
 ## BR-015 — Closed-period stability
 
 Closed Financial Periods shall remain historically stable.
+
+**Implemented by:** [#21](https://github.com/ReGalala/Fairbnb/issues/21)
 
 ## BR-016 — Closed-period corrections occur later
 
@@ -1187,33 +1499,49 @@ Errors in Closed Financial Periods shall normally be corrected through a traceab
 
 The settlement effect of the correction shall be the calculated difference between the original amount and the correct amount.
 
+**Implemented by:** [#51](https://github.com/ReGalala/Fairbnb/issues/51)
+
 ## BR-017 — Reopening is exceptional
 
 Reopening a Closed Financial Period is an exceptional Admin action and shall not be the normal correction mechanism.
+
+**Implemented by:** [#21](https://github.com/ReGalala/Fairbnb/issues/21), [#55](https://github.com/ReGalala/Fairbnb/issues/55)
 
 ## BR-018 — Payment requires recipient confirmation
 
 A recorded Payment shall not reduce debt until the recipient confirms receipt.
 
+**Implemented by:** [#47](https://github.com/ReGalala/Fairbnb/issues/47)
+
 ## BR-019 — Rejected Payment does not reduce debt
 
 A Rejected Payment has no effect on the outstanding balance.
+
+**Implemented by:** [#47](https://github.com/ReGalala/Fairbnb/issues/47)
 
 ## BR-020 — Pending Payment does not reduce debt
 
 A Pending Payment is shown separately but does not reduce the outstanding balance.
 
+**Implemented by:** [#46](https://github.com/ReGalala/Fairbnb/issues/46)
+
 ## BR-021 — Confirmed Payment reduces matching pair balance
 
 A Confirmed Payment reduces only the corresponding debtor-to-creditor balance in the Payment's currency.
+
+**Implemented by:** [#47](https://github.com/ReGalala/Fairbnb/issues/47)
 
 ## BR-022 — Payment is not expense-specific
 
 A member-to-member Payment settles debt between people and does not need to be assigned to a particular Expense.
 
+**Implemented by:** [#67](https://github.com/ReGalala/Fairbnb/issues/67)
+
 ## BR-023 — Sender controls unconfirmed mistake cleanup
 
 The sender may delete their own Pending or Rejected Payment, but not a Confirmed Payment through the normal workflow.
+
+**Implemented by:** [#48](https://github.com/ReGalala/Fairbnb/issues/48)
 
 ## BR-024 — No generic transaction ledger
 
@@ -1221,9 +1549,13 @@ Fairbnb does not attempt to represent every real-world bank or cash transaction.
 
 The Payment model represents relevant debt repayments between Unit members.
 
+**Implemented by:** [#67](https://github.com/ReGalala/Fairbnb/issues/67)
+
 ## BR-025 — Pairwise settlement only
 
 Fairbnb aggregates debt by member pair and currency and does not optimize a multi-member payment graph to minimize transfer count.
+
+**Implemented by:** [#44](https://github.com/ReGalala/Fairbnb/issues/44)
 
 ## BR-026 — Saved templates are not scheduled financial entries
 
@@ -1231,9 +1563,13 @@ A saved ExpenseTemplate or ManualIncomeTemplate shall not automatically generate
 
 The User must explicitly create each actual Expense or ManualIncome record.
 
+**Implemented by:** [#29](https://github.com/ReGalala/Fairbnb/issues/29), [#34](https://github.com/ReGalala/Fairbnb/issues/34)
+
 ## BR-027 — Saved templates are private
 
 Saved expense and manual-income templates are personal workflow data belonging to the Unit member who created them for that Unit and are not shared with other Unit members.
+
+**Implemented by:** [#27](https://github.com/ReGalala/Fairbnb/issues/27), [#32](https://github.com/ReGalala/Fairbnb/issues/32)
 
 ## BR-028 — At least one Admin
 
@@ -1241,33 +1577,49 @@ A Unit shall always have at least one active Admin.
 
 The system shall prevent role changes or member inactivation that would leave the Unit without an active Admin.
 
+**Implemented by:** [#17](https://github.com/ReGalala/Fairbnb/issues/17)
+
 ## BR-029 — Historical members are preserved
 
 A Unit member with historical financial or ownership information shall be inactivated rather than permanently deleted.
+
+**Implemented by:** [#17](https://github.com/ReGalala/Fairbnb/issues/17)
 
 ## BR-030 — Membership is not ownership
 
 Joining or accepting an invitation to a Unit does not automatically create a financial ownership share.
 
+**Implemented by:** [#16](https://github.com/ReGalala/Fairbnb/issues/16)
+
 ## BR-031 — Role is not ownership
 
 The User/Admin permission role is independent from a member's financial ownership percentage.
+
+**Implemented by:** [#20](https://github.com/ReGalala/Fairbnb/issues/20)
 
 ## BR-032 — Unit can be incomplete during setup
 
 A Unit may exist in setup/incomplete state without Rooms, but it cannot become Active without at least one Room.
 
+**Implemented by:** [#19](https://github.com/ReGalala/Fairbnb/issues/19)
+
 ## BR-033 — Cancelled financial entries remain historical
 
 Cancelling an open-period Expense or ManualIncome entry removes it from active calculations without physically deleting its history.
+
+**Implemented by:** [#25](https://github.com/ReGalala/Fairbnb/issues/25), [#31](https://github.com/ReGalala/Fairbnb/issues/31)
 
 ## BR-034 — Reporting conversion is presentation-only
 
 Any EGP-to-USD conversion used for combined reporting/statistics is a presentation calculation and shall never rewrite the original EGP financial record.
 
+**Implemented by:** [#64](https://github.com/ReGalala/Fairbnb/issues/64)
+
 ## BR-035 — Invitations do not expire automatically
 
 A Unit invitation remains Pending until it is accepted, declined, or removed by an Admin.
+
+**Implemented by:** [#16](https://github.com/ReGalala/Fairbnb/issues/16), [#85](https://github.com/ReGalala/Fairbnb/issues/85)
 
 ---
 
@@ -1277,41 +1629,61 @@ A Unit invitation remains Pending until it is accepted, declined, or removed by 
 
 Fairbnb shall be designed mobile-first while remaining usable on desktop.
 
+**Implemented by:** [#75](https://github.com/ReGalala/Fairbnb/issues/75)
+
 ## NFR-002 — Progressive Web App
 
 Fairbnb shall support Progressive Web App capabilities so supported devices can add it to the home screen and launch it in an app-like mode.
+
+**Implemented by:** [#74](https://github.com/ReGalala/Fairbnb/issues/74)
 
 ## NFR-003 — Backend authorization
 
 Unit access restrictions and role permissions shall be enforced by the backend and shall not rely only on frontend controls.
 
+**Implemented by:** [#15](https://github.com/ReGalala/Fairbnb/issues/15)
+
 ## NFR-004 — Calculation reliability
 
 Financial calculations shall be deterministic and testable.
+
+**Implemented by:** [#71](https://github.com/ReGalala/Fairbnb/issues/71)
 
 ## NFR-005 — Monetary precision
 
 Financial amounts shall use decimal representations appropriate for money rather than floating-point approximations.
 
+**Implemented by:** [#71](https://github.com/ReGalala/Fairbnb/issues/71)
+
 ## NFR-006 — Secure production communication
 
 Production communication shall use HTTPS.
+
+**Implemented by:** [#76](https://github.com/ReGalala/Fairbnb/issues/76)
 
 ## NFR-007 — Protect secrets
 
 Credentials and sensitive configuration shall not be committed to source control.
 
+**Implemented by:** [#73](https://github.com/ReGalala/Fairbnb/issues/73)
+
 ## NFR-008 — Production backups
 
 Production financial data shall have an appropriate database backup strategy.
+
+**Implemented by:** [#77](https://github.com/ReGalala/Fairbnb/issues/77)
 
 ## NFR-009 — Historical data integrity
 
 The system shall prioritize preservation and traceability of historical financial information.
 
+**Implemented by:** [#69](https://github.com/ReGalala/Fairbnb/issues/69)
+
 ## NFR-010 — UTC timestamps
 
 Stored system timestamps shall use UTC.
+
+**Implemented by:** [#72](https://github.com/ReGalala/Fairbnb/issues/72)
 
 ---
 
@@ -1324,11 +1696,13 @@ The backend shall use C# and ASP.NET Core Web API.
 ## TR-002 — Persistence
 
 The backend shall use Entity Framework Core with PostgreSQL.
+
 **Implemented by:** [#1](https://github.com/ReGalala/Fairbnb/issues/1)
 
 ## TR-003 — Authentication technology
 
 Authentication shall use ASP.NET Identity and JWT-based API authentication.
+
 **Implemented by:** [#3](https://github.com/ReGalala/Fairbnb/issues/3)
 
 ## TR-004 — Frontend technology
@@ -1341,17 +1715,25 @@ Files requiring persistent production storage shall use Azure Blob Storage.
 
 This includes source CSV files and expense attachments.
 
+**Implemented by:** [#26](https://github.com/ReGalala/Fairbnb/issues/26), [#35](https://github.com/ReGalala/Fairbnb/issues/35), [#78](https://github.com/ReGalala/Fairbnb/issues/78)
+
 ## TR-006 — Cloud platform
 
 The production application shall be hosted using Microsoft Azure.
+
+**Implemented by:** [#76](https://github.com/ReGalala/Fairbnb/issues/76)
 
 ## TR-007 — Source control
 
 The project shall use GitHub for source control.
 
+**Implemented by:** [#92](https://github.com/ReGalala/Fairbnb/issues/92)
+
 ## TR-008 — CI/CD
 
 The project shall use GitHub Actions for automated build, testing and deployment.
+
+**Implemented by:** [#79](https://github.com/ReGalala/Fairbnb/issues/79)
 
 ---
 
@@ -1367,6 +1749,8 @@ The provider identifier, source currency, target currency, rate, and rate date u
 
 If the configured provider cannot supply a suitable rate, Fairbnb shall not silently substitute a different rate source. The combined converted value shall instead be unavailable until a valid rate is obtained or an Admin-approved provider configuration is changed.
 
+**Implemented by:** [#63](https://github.com/ReGalala/Fairbnb/issues/63)
+
 ## TD-002 — Exchange-rate date policy
 
 For a monthly Financial Period, Fairbnb shall use the latest available exchange rate published on or before the final calendar day of that Financial Period.
@@ -1374,6 +1758,8 @@ For a monthly Financial Period, Fairbnb shall use the latest available exchange 
 For example, a September report shall use the latest available rate on or before 30 September.
 
 The rate is for reporting/statistics only. It shall never mutate, settle, or net the underlying EGP and USD records.
+
+**Implemented by:** [#63](https://github.com/ReGalala/Fairbnb/issues/63)
 
 ## TD-003 — Airbnb CSV normalization
 
@@ -1428,6 +1814,8 @@ The importer shall also retain:
 
 The current validated sample contains 40 rows, three transaction types, four external listing names, and USD as the source currency.
 
+**Implemented by:** [#36](https://github.com/ReGalala/Fairbnb/issues/36)
+
 ## TD-004 — Email delivery
 
 Fairbnb shall use Azure Communication Services Email behind an application-level email service abstraction.
@@ -1443,6 +1831,8 @@ The first notification types are:
 
 - notification to the sender when a Payment is rejected
 
+**Implemented by:** [#56](https://github.com/ReGalala/Fairbnb/issues/56), [#57](https://github.com/ReGalala/Fairbnb/issues/57), [#58](https://github.com/ReGalala/Fairbnb/issues/58), [#83](https://github.com/ReGalala/Fairbnb/issues/83)
+
 ## TD-005 — Database backup and recovery
 
 Production PostgreSQL data shall use Azure Database for PostgreSQL automated backups and point-in-time restore.
@@ -1450,6 +1840,8 @@ Production PostgreSQL data shall use Azure Database for PostgreSQL automated bac
 Target short-term point-in-time retention is 35 days where supported by the selected Azure Database for PostgreSQL configuration. If the selected deployment configuration imposes a lower maximum, Fairbnb shall use the maximum available retention and document that limitation before production use.
 
 The restore procedure shall be documented and tested before Fairbnb is treated as production-ready.
+
+**Implemented by:** [#77](https://github.com/ReGalala/Fairbnb/issues/77)
 
 ## TD-006 — Blob data protection
 
@@ -1462,6 +1854,8 @@ The initial soft-delete retention target is 30 days.
 
 Application-level historical rules still apply: Fairbnb shall not intentionally delete source files or historical attachments merely because infrastructure recovery features exist.
 
+**Implemented by:** [#78](https://github.com/ReGalala/Fairbnb/issues/78)
+
 ## TD-007 — Secrets and production configuration
 
 Secrets and environment-specific production configuration shall not be committed to GitHub.
@@ -1469,6 +1863,8 @@ Secrets and environment-specific production configuration shall not be committed
 Production secrets such as database credentials, JWT/signing secrets, email credentials, and external-service configuration shall be supplied through Azure-hosted configuration and/or Azure Key Vault.
 
 Local development shall use separate development configuration and developer secrets.
+
+**Implemented by:** [#73](https://github.com/ReGalala/Fairbnb/issues/73)
 
 ---
 
