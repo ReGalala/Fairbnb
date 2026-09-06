@@ -3,6 +3,7 @@ using Fairbnb.Api.DTOs;
 using Fairbnb.Api.Entities;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace Fairbnb.Api.Services;
 
 public class UnitsService
@@ -13,7 +14,7 @@ public class UnitsService
         _context = context;
     }
 
-    public async Task<UnitResponse> CreateAsync(CreateUnitRequest request)
+    public async Task<UnitResponse> CreateUnitAsync(CreateUnitRequest request, string userId)
     {
         var unit = new Unit
         {
@@ -23,15 +24,29 @@ public class UnitsService
             CreatedAt = DateTime.UtcNow
         };
 
+        var membership = new UnitMember
+        {
+            Unit = unit,
+            UserId = userId,
+            Role = "Admin",
+            IsActive = true,
+            JoinedAt = DateTime.UtcNow
+        };
+
         _context.Units.Add(unit);
+        _context.UnitMembers.Add(membership);
         await _context.SaveChangesAsync();
 
         return MapToResponse(unit);
     }
 
-    public async Task<List<UnitResponse>> GetAllAsync()
+    public async Task<List<UnitResponse>> GetAllUnitsAsync(string userId)
     {
-        var units = await _context.Units.ToListAsync();
+        var units = await _context.UnitMembers
+        .Where(member => member.UserId == userId && member.IsActive)
+        .Select(member => member.Unit)
+        .ToListAsync();
+
         return units.Select(MapToResponse).ToList();
     }
     

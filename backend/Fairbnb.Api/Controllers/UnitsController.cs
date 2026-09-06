@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using Fairbnb.Api.DTOs;
 using Fairbnb.Api.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -19,14 +20,16 @@ public class UnitsController: ControllerBase
     [HttpPost]
     public async Task<IActionResult> Create(CreateUnitRequest request)
     {
-        var unit = await _unitsService.CreateAsync(request);
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier)!;
+        var unit = await _unitsService.CreateUnitAsync(request, userId);
         return CreatedAtAction(nameof(GetAll), new {id = unit.Id}, unit);
     }
 
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
-        var units = await _unitsService.GetAllAsync();
+        var userId= User.FindFirstValue(ClaimTypes.NameIdentifier)!;
+        var units = await _unitsService.GetAllUnitsAsync(userId);
         return Ok(units);
     }
 }
