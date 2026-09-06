@@ -5,7 +5,6 @@
 **Date:** 5 September 2026  
 **Basis:** Agreed domain model, ERD decisions, permission model, financial rules, completed functional UI review, and validation against a real Airbnb September 2025 CSV export.
 
-> This version supersedes v0.6. The product name is **Fairbnb**. “Fairbnb2” is only the local/project folder name and is not the application name.
 
 ---
 
