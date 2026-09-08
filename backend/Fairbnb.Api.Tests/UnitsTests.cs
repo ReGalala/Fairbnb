@@ -111,6 +111,76 @@ public class UnitsTests : IClassFixture<CustomWebApplicationFactory>
         Assert.DoesNotContain(units, u => u.Name == "User1 Unit");
     }
 
+    [Fact]
+    public async Task UpdateUnit_AdminCanEdit()
+    {
+        var token = await GetTokenAsync();
+        _client.DefaultRequestHeaders.Authorization =
+            new AuthenticationHeaderValue("Bearer", token);
+
+        var createResponse = await _client.PostAsJsonAsync("/api/units",
+            new { name = "Old Name", address = "Old Address" });
+        var created = await createResponse.Content.ReadFromJsonAsync<UnitResponse>();
+
+        var updateResponse = await _client.PutAsJsonAsync($"/api/units/{created!.Id}",
+            new { name = "New Name", address = "New Address" });
+
+        Assert.Equal(HttpStatusCode.OK, updateResponse.StatusCode);
+
+        var updated = await updateResponse.Content.ReadFromJsonAsync<UnitResponse>();
+        Assert.NotNull(updated);
+        Assert.Equal("New Name", updated.Name);
+        Assert.Equal("New Address", updated.Address);
+        Assert.Equal(created.Id, updated.Id);
+    }
+
+    [Fact]
+    public async Task UpdateUnit_NonMember_ReturnsForbidden()
+    {
+        // User 1 creates a unit
+        var token1 = await GetTokenAsync();
+        _client.DefaultRequestHeaders.Authorization =
+            new AuthenticationHeaderValue("Bearer", token1);
+
+        var createResponse = await _client.PostAsJsonAsync("/api/units",
+            new { name = "Private Unit", address = "Secret St" });
+        var created = await createResponse.Content.ReadFromJsonAsync<UnitResponse>();
+
+        // User 2 tries to update it
+        var token2 = await GetTokenAsync();
+        _client.DefaultRequestHeaders.Authorization =
+            new AuthenticationHeaderValue("Bearer", token2);
+
+        var updateResponse = await _client.PutAsJsonAsync($"/api/units/{created!.Id}",
+            new { name = "Hacked Name", address = "Hacked Address" });
+
+        Assert.Equal(HttpStatusCode.Forbidden, updateResponse.StatusCode);
+    }
+
+    [Fact]
+    public async Task UpdateUnit_DoesNotCreateNewUnit()
+    {
+        var token = await GetTokenAsync();
+        _client.DefaultRequestHeaders.Authorization =
+            new AuthenticationHeaderValue("Bearer", token);
+
+        await _client.PostAsJsonAsync("/api/units",
+            new { name = "Only Unit", address = "123 St" });
+
+        var unitsBefore = await _client.GetAsync("/api/units");
+        var listBefore = await unitsBefore.Content.ReadFromJsonAsync<List<UnitResponse>>();
+        var countBefore = listBefore!.Count;
+
+        var unit = listBefore.First();
+        await _client.PutAsJsonAsync($"/api/units/{unit.Id}",
+            new { name = "Updated Name", address = "Updated Address" });
+
+        var unitsAfter = await _client.GetAsync("/api/units");
+        var listAfter = await unitsAfter.Content.ReadFromJsonAsync<List<UnitResponse>>();
+
+        Assert.Equal(countBefore, listAfter!.Count);
+    }
+
     private record TokenResponse(string Token);
     private record UnitResponse(int Id, string Name, string Address, string Status);
 }

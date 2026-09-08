@@ -50,6 +50,26 @@ public class UnitsService
         return units.Select(MapToResponse).ToList();
     }
     
+    public async Task<UnitResponse?> UpdateUnitAsync(UpdateUnitRequest request, int unitId)
+    {
+        var unit = await _context.Units.FindAsync(unitId);
+        if(unit == null)
+            return null;        
+        unit.Name = request.Name;
+        unit.Address = request.Address;
+        await _context.SaveChangesAsync();
+        return MapToResponse(unit);
+    }
+
+    public async Task<bool> IsUserAdminAsync(int unitId, string userId)
+    {
+        return await _context.UnitMembers
+        .AnyAsync(member => member.UnitId == unitId
+        && member.UserId == userId
+        && member.Role == "Admin"
+        && member.IsActive);
+    }
+
     private static UnitResponse MapToResponse(Unit unit)
     {
         return new UnitResponse

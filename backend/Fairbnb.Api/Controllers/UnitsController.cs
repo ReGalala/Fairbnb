@@ -32,4 +32,15 @@ public class UnitsController: ControllerBase
         var units = await _unitsService.GetAllUnitsAsync(userId);
         return Ok(units);
     }
+
+    [HttpPut("{unitId}")]
+    public async Task<IActionResult> UpdateUnit(int unitId,UpdateUnitRequest request)
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier)!;
+        var isAdmin = await _unitsService.IsUserAdminAsync(unitId, userId);
+        if(!isAdmin)
+            return Forbid();
+        var updatedUnit = await _unitsService.UpdateUnitAsync(request, unitId);
+        return Ok(updatedUnit);
+    }
 }
