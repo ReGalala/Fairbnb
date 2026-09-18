@@ -1,184 +1,437 @@
-.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
 
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
-}
-
-.hero {
-  position: relative;
-
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 0;
-  }
-
-  .framework,
-  .vite {
-    position: absolute;
-  }
-
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
-}
-
-#center {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
-
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
-}
-
-#next-steps {
-  display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
-
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
-    }
-  }
-
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-}
-
-#next-steps ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
-
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
+/* ----------- MENY AND BUTTONS --------- */
+.layout {
     display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-  }
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    align-items: flex-start;
 }
 
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
+.sidebar {
+    position: relative;
+    width: 25vw;
+    min-width: 150px;
+    height: 100vh;
+    flex-shrink: 0;
+    margin-left: -7vw;
+    margin-top: -0.2vw;
+    overflow: hidden;
 }
 
-.ticks {
-  position: relative;
-  width: 100%;
-
-  &::before,
-  &::after {
-    content: '';
+.sidebar-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0vw 0px;
     position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
-  }
-
-  &::before {
+    top: 0;
     left: 0;
-    border-left-color: var(--border);
-  }
-  &::after {
+    z-index: 0;
+}
+
+.sidebar-menu {
+    position: absolute;
+    top: 19.7%;
+    bottom: 28.5%;
+    left: 33%;
+    width: 19vW;
+    right: 8%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    
+}
+
+.sidebar-menu-item {
+    width: 70%;
+    flex: 1;
+    cursor: pointer;
+    position: relative;
+    
+    
+}
+
+
+.sidebar-menu-item:hover {
+    opacity: 1;
+}
+
+.sidebar-highlight {
+    position: absolute;
+    top: -0.8vw;
+    left: -0.5vw;
+    width: 110%;
+    height: 142%;
+    display: block;
+}
+
+.main-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    z-index: 11;
+}
+
+.main-content {
+    flex: 1;
+    padding: 1vw;
+    overflow-y: auto;
+    background-color: #1a1a1a;
+}
+
+/* --------- HEADER ------------------ */
+.header {
+    position: relative;
+    width: calc(100% + 1.3vw);
+    height: 5vw;
+    margin-bottom: 0.5vw;
+    overflow: hidden;
+    z-index: 12;
+    left: -2.5vw;
+}
+
+.header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
     right: 0;
-    border-right-color: var(--border);
-  }
+    bottom: 0;
+    z-index: 0;
+    display: flex;
+}
+
+.header-bg-left {
+    height: 100%;
+    width: 4vw;
+    object-fit: cover;
+    object-position: left;
+}
+
+.header-bg-middle {
+    height: 111%;
+    flex: 1;
+    min-width: 0;
+    object-fit: cover;
+    margin-top: -0.31vw;
+}
+
+.header-bg-right {
+    height: 97%;
+    width: 4vw;
+    object-fit: cover;
+    object-position: right;
+    margin-top: 0.1vw;
+}                                                 
+                                                
+.header-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 5vw;
+}
+
+.header-searchbar {
+    height: 7vw;
+    width: 20vw;
+    margin-left: 35vw;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+}
+
+.header-icon-settings {
+    height: 4vw;
+    width: 4vw;
+    cursor: pointer;
+}
+
+.header-icon-notification {
+    height: 3.5vw;
+    width: 3.5vw;
+    cursor: pointer;
+}
+
+.header-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.header-profile-pic {
+    height: 3.8vw;
+    width: 3.8vw;
+}
+
+.header-profile-info {
+    display: flex;
+    flex-direction: column;
+    width: 5vw;
+    height: 3vw;
+    overflow: hidden;
+}
+
+.header-profile-name {
+    color: #e0d6c8;
+    font-size: 0.8vw;
+    font-weight: 500;
+}
+
+.header-profile-role {
+    color: #9a8c7a;
+    font-size: 0.6vw;
+}
+
+/* --------- YOUR SCREEN (1792px) --------- */
+@media (max-width: 1800px) {
+    .sidebar {
+        margin-left: -5.6vw;
+        width: 25vw;
+        height: 90vh;
+    }
+    .sidebar-menu {
+        left: 26.8%;
+        width: 15vw;
+        height: 47.5vh;
+    }
+    .sidebar-highlight {
+        height: 150%;
+    }
+    .header {
+        left: -7vw;
+        width: calc(100% + 4.2vw);
+    }
+}
+
+/* --------- LAPTOP (1512px) --------- */
+@media (max-width: 1512px) {
+    .sidebar {
+        margin-left: -9vw;
+        width: 28.8vw;
+        height: 80vh;
+    }
+    .sidebar-bg {
+        object-position: 2.5vw 0px;
+    }
+    .sidebar-menu {
+        left: 35.5%;
+        width: 17.5vw;
+    }
+    .header {
+        left: -5.5vw;
+        width: calc(100% + 2.4vw);
+    }
+}
+
+/* --------- HAMBURGER (hidden on large screens) --------- */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 20;
+}
+
+.hamburger-icon {
+    width: 3vw;
+    height: 3vw;
+}
+
+/* --------- SMALL LAPTOP (1024px) --------- */
+@media (max-width: 1024px) {
+    .sidebar {
+        margin-left: -10.7vw;
+        width: 31vw;
+        height: 88vh;
+    }
+    .sidebar-menu-item {
+        
+    }
+    .sidebar-menu {
+        left: 39.4%;
+        top: 19.5%;
+        height: 51.5%;
+        width: 22vw;
+    }
+    .sidebar-highlight {
+        top: -0.68vw;
+        left: -0.5vw;
+        width: 110%;
+        height: 142%;
+    }
+    .header {
+        left: -2vw;
+        width: calc(100% + -1.6vw);
+    }
+}
+
+/* --------- TABLET (768px) --------- */
+@media (max-width: 769px) {
+    .hamburger-btn {
+        display: block;
+        position: fixed;
+        top: -0.5vw;
+        left: 1vw;
+    }
+    .hamburger-icon {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        z-index: 15;
+        transition: left 0.3s ease;
+    }
+
+    .sidebar-open .sidebar {
+        left: 0;
+        margin-left: -15vw;
+        width: 45vw;
+        height: 100vh;
+    }
+
+    .main-wrapper {
+        width: 100%;
+    }
+
+    .header {
+        left: 7vw;
+        width: 93%;
+    }
+    .sidebar-open .hamburger-btn {
+        top: 1.4vw;
+        left: 29vw;
+    }
+    .sidebar-open .header-content {
+        padding: 0 3vw;
+    }
+    .sidebar-open .header-searchbar {
+        margin-left: 13vw;
+    }
+    .sidebar-open .header {
+        left: 35vw;
+        width: calc(100% + -35vw);
+        height: 6.8vw;
+        margin-top: 0.4vw;
+    }
+    .sidebar-open .header-bg-middle {
+        height: 111%;
+        margin-top: -0.34vw;
+        object-fit: cover;
+    }
+    .sidebar-open .header-bg-middle:nth-child(n+6) {
+        display: none;
+    }
+    .sidebar-open .sidebar-menu-item {
+        
+    }
+    .sidebar-open .sidebar-menu {
+        left: 39%;
+        top: 18.7%;
+        right: 8%;
+        width: 72%;
+        height: 52%;
+    }
+    .sidebar-open .sidebar-highlight {
+        top: -0.68vw;
+        left: -0.5vw;
+        width: 110%;
+        height: 150%;
+    }
+}
+
+/* --------- MOBILE (425px) --------- */
+@media (max-width: 425px) {
+    .hamburger-btn {
+        top: 0.5vw;
+        left: 2vw;
+    }
+    .hamburger-icon {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .header {
+        left: 14vw;
+        width: 86%;
+        height: 12vw;
+    }
+    .header-content {
+        padding: 0 8vw;
+    }
+    .header-searchbar {
+        margin-left: 5vw;
+        width: 30vw;
+        height: 10vw;
+    }
+    .header-icon-settings {
+        width: 6vw;
+        height: 6vw;
+    }
+    .header-icon-notification {
+        width: 5vw;
+        height: 5vw;
+    }
+    .header-profile-pic {
+        width: 6vw;
+        height: 6vw;
+    }
+    .header-profile-info {
+        display: none;
+    }
+    .header-bg-middle:nth-child(n+4) {
+        display: none;
+    }
+
+    .sidebar-open .sidebar {
+        margin-left: -29vw;
+        width: 130vw;
+        height: 180vW
+    }
+    .sidebar-open .hamburger-btn {
+        top: 0.0vw;
+        left: 69vw;
+    }
+    .sidebar-open .hamburger-icon {
+        width: 18vw;
+        height: 18vw;
+    }
+    .sidebar-open .header {
+        display: none;
+    }
+    .sidebar-open .sidebar-menu-item {
+        
+    }
+    .sidebar-open .sidebar-bg {      
+        object-fit: fill;                
+        object-position: top;               
+    }                                         
+     
+    .sidebar-open .sidebar-menu {
+        left: 26.5%;
+        top: 19.5%;
+        width: 60%;
+        height: 52%;
+    }
+    .sidebar-open .sidebar-highlight {
+        top: -2.9vw;
+        left: -1.5vw;
+        width: 110%;
+        height: 155%;
+    }
 }
