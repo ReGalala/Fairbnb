@@ -8,6 +8,9 @@
     margin: 0;
     padding: 0;
     align-items: flex-start;
+    background-image:url('./assets/BackgroundCream.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .sidebar {
@@ -82,7 +85,7 @@
     flex: 1;
     padding: 1vw;
     overflow-y: auto;
-    background-color: #1a1a1a;
+    background-color: transparent;
 }
 
 /* --------- HEADER ------------------ */
